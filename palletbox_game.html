@@ -1,0 +1,259 @@
+<!DOCTYPE html><meta charset="utf-8">
+<html>
+<head>
+<script src="js/jquery-3.4.1.min.js"></script> 
+<link href="css/palletStyle.css" rel="stylesheet">
+<script src="js/palletlocaldb_latest.js"></script>
+</head>
+
+<div id="main-frame">
+	<div id="characterUIwrapper">
+		<div id="playerParty">
+			<div class="playerStats">
+				<div id="player1">
+					<span id="playerHP">
+						<script type="text/javascript">
+						document.write(displayHP)
+						</script>
+					</span><br/>
+					<span id="playerLevel">
+						Level <span id="currentLevel">
+								<script type="text/javascript">
+									document.write(currentLevel)
+								</script>
+							   </span>
+					</span>
+					<span id="playerModifier">+ 
+						<script type="text/javascript">
+									document.write(modifier)
+								</script>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="enemyStats">
+			<div id="enemyTypeDisplay">
+				<script type="text/javascript">
+					document.write(enemyType)
+				</script>
+			</div>
+			<div id="enemyHPDisplay">
+				<script type="text/javascript">
+					document.write(enemyHP)
+				</script>
+			</div>
+		</div>
+		<div id="playerInventory">
+			<div id="moves" class="inventory">
+				<span>
+					<script type="text/javascript">
+						document.write(moves)
+					</script>
+				</span>
+			</div>
+			<div id="bullets" class="inventory">
+				<span>
+					<script type="text/javascript">
+						document.write(bullets)
+					</script>
+				</span>
+			</div>
+			<div id="potions" class="inventory">
+				<span>
+					<script type="text/javascript">
+						document.write(potions)
+					</script>
+				</span>
+			</div>
+			<div id="coffee" class="inventory">
+				<span>
+					<script type="text/javascript">
+						document.write(coffee)
+					</script>
+				</span>
+			</div>
+			<div id="coins" class="inventory">
+				<span>
+					<script type="text/javascript">
+						document.write(coins)
+					</script>
+				</span>
+			</div>
+			<div id="stones" class="inventory">
+				<span>
+					<script type="text/javascript">
+						document.write(stones)
+					</script>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div id="controlPanel">
+		<div class="cpWrapper">
+			<div>
+				<h1>Player 1</h1>
+			</div>
+				<h2>Stats</h2>
+					<div>
+						<label>Current HP / Max HP</label><br/>
+						<input type="text" name="currentHP" id="cpHP" value="" />
+						<div class="set button" id="sHP">set</div>
+						<input type="text" name="maxHP" id="cpMaxHP" value="" />
+						<div class="set button" id="sMaxHP">set</div>
+					</div>
+					<div>
+						<label>Level     / Modifier</label><br/>
+						<input type="text" name="currentLevel" id="cpLevel" value="" />
+						<div class="set button" id="sLevel">set</div>
+						<input type="text" name="modifier" id="cpModifier" value="" />
+						<div class="set button" id="sModifier">set</div>
+					</div>
+				<h2>Inventory</h2>
+					<div>
+						<label for="name">Moves</label><br/>
+						<div class="dec button" id="dM">-</div>
+						<input type="text" name="moves" id="cpMoves" value="" />
+						<div class="inc button" id="iM">+</div>
+						<div class="set button" id="sM">set</div>
+					</div>
+					<div>
+						<label for="name">Bullets</label><br/>
+						<div class="dec button" id="dB">-</div>
+						<input type="text" name="bullets" id="cpBullets" value=""/>
+						<div class="inc button" id="iB">+</div>
+						<div class="set button" id="sB">set</div>
+					</div>
+					<div>
+						<label for="name">Potions</label><br/>
+						<div class="dec button" id="dP">-</div>
+						<input type="text" name="potions" id="cpPotions" value=""/>
+						<div class="inc button" id="iP">+</div>
+						<div class="set button" id="sP">set</div>
+					</div>
+					<div>
+						<label for="name">Coffee</label><br/>
+						<div class="dec button" id="dC">-</div>
+						<input type="text" name="coffee" id="cpCoffee" value=""/>
+						<div class="inc button" id="iC">+</div>
+						<div class="set button" id="sC">set</div>
+					</div>
+					<div>
+						<label for="name">Gold</label><br/>
+						<div class="dec button" id="dG">-</div>
+						<input type="text" name="gold" id="cpCoins" value=""/>
+						<div class="inc button" id="iG">+</div>
+						<div class="set button" id="sG">set</div>
+					</div>
+					<div>
+						<label for="name">Rez Stone</label><br/>
+						<div class="dec button" id="dS">-</div>
+						<input type="text" name="rez" id="cpStones" value="0"/>
+						<div class="inc button" id="iS">+</div>
+						<div class="set button" id="sS">set</div>
+					</div>
+		</div>
+		<div class="cpWrapper">.</div>
+		<div class="cpWrapper">.</div>
+		<div class="clear"></div>
+		<div class="cpEnemy">
+			<div id="etehp">
+				<label>Enemy Type /     Enemy HP</label><br/>
+				<input type="text" name="enemy" id="cpEnemyType" value="" />
+				<input type="text" name="enemyHp" id="cpEnemyHP" value="" />
+				<div class="set button" id="sEnemyStats">set</div> 
+			</div>
+			<div id="attackEnemy">
+				<div class="aeButton" id="ae1">1</div>
+				<div class="aeButton" id="ae3">3</div>
+				<div class="aeButton" id="ae5">5</div>
+				<div class="aeButton" id="ae10">10</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="cpTickerUI">
+			<div class="cpTickerWrapper">
+				<div>
+					<label>Damage /     Max Damage</label><br/>
+					<input type="text" name="damage" id="cpDamage" value="" />
+					<div class="set button" id="sDamage">set</div>
+					<input type="text" name="maxDamage" id="cpMaxDamage" value="" />
+					<div class="set button" id="sMaxDamage">set</div>
+				</div>
+			</div>
+			<div class="cpTickerWrapper">
+				<div>
+					<label>Follows /      Follows Goal</label><br/>
+					<input type="text" name="follows" id="cpFollows" value="" />
+					<div class="set button" id="sFollows">set</div>
+					<input type="text" name="followsGoal" id="cpFollowsGoal" value="" />
+					<div class="set button" id="sFollowsGoal">set</div>
+				</div>
+			</div>
+			<div class="cpTickerWrapper">
+				<div>
+					<label>Subs /         Subs Goal</label><br/>
+					<input type="text" name="subs" id="cpSubs" value="" />
+					<div class="set button" id="sSubs">set</div>
+					<input type="text" name="subsGoal" id="cpSubsGoal" value="" />
+					<div class="set button" id="sSubsGoal">set</div>
+				</div>
+			</div>
+			<div class="cpTickerWrapper">
+				<div>
+					<label>Bits /          Bits Goal</label><br/>
+					<input type="text" name="bits" id="cpBits" value="" />
+					<div class="set button" id="sBits">set</div>
+					<input type="text" name="bitsGoal" id="cpBitsGoal" value="" />
+					<div class="set button" id="sBitsGoal">set</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="ticker">
+		<div id="damageWrapper" class="xpBars">
+			<span class="xpBarLabel">Damage XP:</span>
+			<div id="damageXPbar" class="barBar">
+				<div id="damageFill">
+				<script type="text/javascript">
+					document.write(damageXPbar)
+				</script>
+				</div>
+			</div>
+		</div>
+		<div id="followsWrapper" class="xpBars">
+			<span class="xpBarLabel">Follows XP:</span>
+			<div id="damageXPbar" class="barBar">
+				<div id="followsFill">
+				<script type="text/javascript">
+					document.write(followsXPbar)
+				</script>
+				</div>
+			</div>
+		</div>
+		
+		<div id="subsWrapper" class="xpBars">
+			<span class="xpBarLabel">Subs XP:</span>
+			<div id="damageXPbar" class="barBar">
+				<div id="subsFill">
+				<script type="text/javascript">
+					document.write(subsXPbar)
+				</script>
+				</div>
+			</div>
+		</div>
+		<div id="bitsWrapper" class="xpBars">
+			<span class="xpBarLabel">Bits XP:</span>
+			<div id="damageXPbar" class="barBar">
+				<div id="bitsFill">
+				<script type="text/javascript">
+					document.write(bitsXPbar)
+				</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</html>
+
+

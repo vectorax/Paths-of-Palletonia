@@ -1,0 +1,226 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+input{
+	width:50px;
+	text-align:center;
+}
+#main-frame {
+    height: 775px;
+    width: 1353px;
+    background:#ccc;
+    display: block;
+    position: absolute;
+}
+
+#characterUIwrapper{
+	width: 313px;
+    height: 720px;
+    background: url(../images/BattleBoxPanelMain.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 5px solid black;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#controlPanel {
+    height:680px;
+    width:995px;
+    background:BurlyWood;
+    position:absolute;
+    top:0;
+    right:0;
+	padding:20px;
+}
+.cpWrapper {
+    width: 33%;
+    float: left;
+	margin-bottom:20px;
+}
+.cpEnemy {
+    margin-bottom: 10px;
+    background:rgba(255,0,0,.1);
+    padding: 5px;
+	height:50px;
+}
+#cpEnemyType{
+	width:100px;
+}
+.cpTickerUI{
+	padding-top:20px;
+	border-top:3px solid black;
+	width:100%;
+}
+.cpTickerWrapper{
+	width:24%;
+	float:left;
+}
+#ticker {
+    height: 55px;
+    width: 50%;
+    background:#655939;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color:white;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.xpBarLabel {
+    font-variant: all-small-caps;
+    display: block;
+    float: left;
+    height: 12px;
+    line-height: 8px;
+}
+.button{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    text-align:center;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+	-webkit-border-radius: 2px 2px 2px;
+	border-radius: 2px 2px 2px;
+}
+.inc{
+    color: green;
+    border: 1px solid green;
+}
+.dec{
+    color: red;
+    border: 1px solid red;
+}
+.set{
+	color:#464646;
+	border:1px solid black;
+	width:35px;
+}
+#player1{
+    position: absolute;
+    left: 50px;
+	top: 467px;
+	color:#3c3c3c;
+	font-weight: bold;
+	width: 110px;
+}
+#playerHP{font-size: 25px;}
+#playerLevel{
+	font-size: 13px;
+	top: 25px;
+	position: absolute;
+}
+#playerModifier{
+	font-size: 13px;
+	position: absolute;
+	top: 25px;
+	left: 63px;
+}
+#moves{
+	top:605px;
+	right:265px;
+}
+#bullets{
+    right: 160px;
+    top: 605px;
+}
+#potions{
+	top:605px;
+	right:65px;
+}
+#coffee{
+	top:664px;
+	right:265px;
+}
+#coins{
+	top:664px;
+	right:160px;
+}
+#stones{
+	top:664px;
+	right:65px;
+}
+.inventory{
+	color: white;
+    font-weight: bold;
+    font-size: 38px;
+	position:absolute;
+}
+.xpBars {
+    height: 10px;
+    margin: 3px 1px;
+}
+.barBar {
+    height: 10px;
+    width: 605px;
+    text-align: center;
+    float: right;
+    line-height: 10px;
+}
+#damageFill{
+	background: rgb(129,0,0);
+	background: linear-gradient(0deg, rgba(129,0,0,1) 0%, rgba(255,78,78,1) 85%, rgba(205,0,0,1) 100%); 
+}
+#followsFill{
+	background: rgb(107,0,122);
+	background: linear-gradient(0deg, rgba(107,0,122,1) 0%, rgba(232,78,255,1) 85%, rgba(182,0,205,1) 100%); 
+	width: 100%;
+}
+#subsFill{
+	background: rgb(5,0,93);
+	background: linear-gradient(0deg, rgba(5,0,93,1) 0%, rgba(53,87,255,1) 85%, rgba(0,28,128,1) 100%); 
+	width: 100%;
+}
+#bitsFill{
+	background: rgb(133,87,0);
+	background: linear-gradient(0deg, rgb(174, 114, 1) 0%, rgb(213, 170, 0) 85%, rgb(236, 134, 4) 100%); 
+	width: 100%;
+}
+#enemyTypeDisplay {
+    left: 100px;
+    position: absolute;
+    top: 556px;
+    font-size: 24px;
+    font-weight: bold;
+    color: darkred;
+}
+#enemyHPDisplay {
+    position: absolute;
+    top: 560px;
+    left: 180px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    background:#ca0202;
+	height: 20px;
+	line-height: 1;
+	color:white;
+}
+#etehp{float:left;}
+#attackEnemy {
+    float: left;
+    margin-left: 30px;
+}
+.aeButton {
+    float: left;
+    background: red;
+	padding: 5px 15px;
+	margin: 0 5px;
+	top: 14px;
+	position: relative;
+	color:darkred;
+    font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.clear{clear:both;}
