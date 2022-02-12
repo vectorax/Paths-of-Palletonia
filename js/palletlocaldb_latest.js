@@ -7,6 +7,13 @@ var displayHP = currentHP+"/"+maxHP;
 var currentLevel = localStorage.getItem('currentLevel',currentLevel);
 var modifier = localStorage.getItem('modifier',modifier);
 
+//Aki
+var akiHP = localStorage.getItem('akiHP',akiHP);
+var akiMaxHP = localStorage.getItem('akiMaxHP',akiMaxHP);
+var akiDisplayHP = akiHP+"/"+akiMaxHP;
+var akiLevel = localStorage.getItem('akiLevel',akiLevel);
+var akiModifier = localStorage.getItem('akiModifier',akiModifier);
+
 //Player Inventory
 var moves = localStorage.getItem('moves',moves);
 var bullets = localStorage.getItem('bullets',bullets);
@@ -35,21 +42,28 @@ var bitsNeeded = localStorage.getItem('bitsNeeded',bitsNeeded);
 var bitsXPbar = bitsGained+"/"+bitsNeeded;
 var bitsFill = (bitsGained/bitsNeeded)*100+"%";
 
-var enemyType = "Beetle";
-var enemyHP = 50;
+var enemyType = localStorage.getItem('enemyType',enemyType);
+var enemyHP = localStorage.getItem('enemyHP',enemyHP);
+
 
 $(document).ready(function(){
 	$('#cpHP').val(currentHP);
 	$('#cpMaxHP').val(maxHP);
 	$('#cpLevel').val(currentLevel);
 	$('#cpModifier').val(modifier);
+//aki
+	$('#cpAkiHP').val(akiHP);
+	$('#cpAkiMaxHP').val(akiMaxHP);
+	$('#cpAkiLevel').val(akiLevel);
+	$('#cpAkiModifier').val(akiModifier);
+//inventory
 	$('#cpMoves').val(moves);
 	$('#cpBullets').val(bullets);
 	$('#cpPotions').val(potions);
 	$('#cpCoffee').val(coffee);
 	$('#cpCoins').val(coins);
 	$('#cpStones').val(stones);
-	//xp bars
+//xp bars
 	$('#cpDamage').val(damageDone);
 	$('#cpMaxDamage').val(damageNeeded);
 	$('#cpFollows').val(followsGained);
@@ -90,6 +104,30 @@ $(document).ready(function(){
 		var modifier = $('#cpModifier').val();
 		document.getElementById('playerModifier').innerHTML = "+ "+modifier;
 		localStorage.setItem('modifier',modifier);
+		});
+//Aki HP functions
+	$('#sAkiHP').click( function() {
+		var akiHP = $('#cpAkiHP').val();
+		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		localStorage.setItem('akiHP',akiHP);
+		location.reload();
+		});
+	$('#sAkiMaxHP').click( function() {
+		var akiMaxHP = $('#cpAkiMaxHP').val();
+		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		localStorage.setItem('akiMaxHP',akiMaxHP);
+		location.reload();
+		});
+// Aki level and modifier
+	$('#sAkiLevel').click( function() {
+		var akiLevel = $('#cpAkiLevel').val();
+		document.getElementById('akiLevel').innerHTML = akiLevel;
+		localStorage.setItem('akiLevel',akiLevel);
+		});
+	$('#sAkiModifier').click( function() {
+		var akiModifier = $('#cpAkiModifier').val();
+		document.getElementById('akiModifier').innerHTML = "+ "+akiModifier;
+		localStorage.setItem('akiModifier',akiModifier);
 		});
 //moves
 	$('#iM').click( function() {
@@ -262,5 +300,130 @@ $(document).ready(function(){
 		document.getElementById('bitsFill').innerHTML = damageXPbar;
 		localStorage.setItem('bitsNeeded',bitsNeeded);
 		location.reload();
-		});	
+		});
+//enemy
+	$('#sEnemyStats').click( function() {
+		var enemyType = $('#cpEnemyType').val();
+		var enemyHP = $('#cpEnemyHP').val();
+		localStorage.setItem('enemyType',enemyType);
+		localStorage.setItem('enemyHP',enemyHP);
+		document.getElementById('enemyTypeDisplay').innerHTML = enemyType;
+		document.getElementById('enemyHPDisplay').innerHTML = enemyHP;
+		location.reload();
+		});
+//battle player
+	$('#ap1').click(function() {
+		var hit = 1;
+		currentHP = currentHP - hit;
+		$('#cpHP').val(currentHP);
+		localStorage.setItem('currentHP',currentHP);
+		document.getElementById('playerHP').innerHTML = displayHP;
+		location.reload();
+	});
+	$('#ap3').click(function() {
+		var hit = 3;
+		currentHP = currentHP - hit;
+		$('#cpHP').val(currentHP);
+		localStorage.setItem('currentHP',currentHP);
+		document.getElementById('playerHP').innerHTML = displayHP;
+		location.reload();
+	});
+	$('#ap5').click(function() {
+		var hit = 5;
+		currentHP = currentHP - hit;
+		$('#cpHP').val(currentHP);
+		localStorage.setItem('currentHP',currentHP);
+		document.getElementById('playerHP').innerHTML = displayHP;
+		location.reload();
+	});
+	$('#ap10').click(function() {
+		var hit = 10;
+		currentHP = currentHP - hit;
+		$('#cpHP').val(currentHP);
+		localStorage.setItem('currentHP',currentHP);
+		document.getElementById('playerHP').innerHTML = displayHP;
+		location.reload();
+	});
+//Battle Aki
+	$('#aap1').click(function() {
+		var hit = 1;
+		akiHP = akiHP - hit;
+		$('#cpAkiHP').val(akiHP);
+		localStorage.setItem('akiHP',akiHP);
+		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		location.reload();
+	});
+	$('#aap3').click(function() {
+		var hit = 3;
+		akiHP = akiHP - hit;
+		$('#cpAkiHP').val(akiHP);
+		localStorage.setItem('akiHP',akiHP);
+		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		location.reload();
+	});
+	$('#aap5').click(function() {
+		var hit = 5;
+		akiHP = akiHP - hit;
+		$('#cpAkiHP').val(akiHP);
+		localStorage.setItem('akiHP',akiHP);
+		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		location.reload();
+	});
+	$('#aap10').click(function() {
+		var hit = 10;
+		akiHP = akiHP - hit;
+		$('#cpAkiHP').val(akiHP);
+		localStorage.setItem('akiHP',akiHP);
+		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		location.reload();
+	});
+//battle enemy
+	$('#ae1').click(function() {
+		var hit = 1;
+		enemyHP = enemyHP - hit;
+		damageDone = parseFloat(damageDone) + parseFloat(hit);
+		$('#cpEnemyHP').val(enemyHP);
+		$('#cpDamage').val(damageDone);
+		localStorage.setItem('damageDone',damageDone);
+		localStorage.setItem('enemyHP',enemyHP);
+		document.getElementById('damageFill').innerHTML = damageXPbar;
+		document.getElementById('enemyHPDisplay').innerHTML = enemyHP;
+		location.reload();
+	});
+	$('#ae3').click(function() {
+		var hit = 3;
+		enemyHP = enemyHP - hit;
+		damageDone = parseFloat(damageDone) + parseFloat(hit);
+		$('#cpEnemyHP').val(enemyHP);
+		$('#cpDamage').val(damageDone);
+		localStorage.setItem('damageDone',damageDone);
+		localStorage.setItem('enemyHP',enemyHP);
+		document.getElementById('damageFill').innerHTML = damageXPbar;
+		document.getElementById('enemyHPDisplay').innerHTML = enemyHP;
+		location.reload();
+	});
+	$('#ae5').click(function() {
+		var hit = 5;
+		enemyHP = enemyHP - hit;
+		damageDone = parseFloat(damageDone) + parseFloat(hit);
+		$('#cpEnemyHP').val(enemyHP);
+		$('#cpDamage').val(damageDone);
+		localStorage.setItem('damageDone',damageDone);
+		localStorage.setItem('enemyHP',enemyHP);
+		document.getElementById('damageFill').innerHTML = damageXPbar;
+		document.getElementById('enemyHPDisplay').innerHTML = enemyHP;
+		location.reload();
+	});
+	$('#ae10').click(function() {
+		var hit = 10;
+		enemyHP = enemyHP - hit;
+		damageDone = parseFloat(damageDone) + parseFloat(hit);
+		$('#cpEnemyHP').val(enemyHP);
+		$('#cpDamage').val(damageDone);
+		localStorage.setItem('damageDone',damageDone);
+		localStorage.setItem('enemyHP',enemyHP);
+		document.getElementById('damageFill').innerHTML = damageXPbar;
+		document.getElementById('enemyHPDisplay').innerHTML = enemyHP;
+		location.reload();
+	});
 });

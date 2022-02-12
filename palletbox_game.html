@@ -29,6 +29,63 @@
 								</script>
 					</span>
 				</div>
+				<div id="playerAki">
+					<span id="akiDisplayHP">
+						<script type="text/javascript">
+						document.write(akiDisplayHP)
+						</script>
+					</span><br/>
+					<span id="akiCurrentLevel">
+						Level <span id="akiLevel">
+								<script type="text/javascript">
+									document.write(akiLevel)
+								</script>
+							   </span>
+					</span>
+					<span id="akiModifier">+ 
+						<script type="text/javascript">
+									document.write(akiModifier)
+								</script>
+					</span>
+				</div>
+				<div id="playerAki">
+					<span id="akiDisplayHP">
+						<script type="text/javascript">
+						document.write(akiDisplayHP)
+						</script>
+					</span><br/>
+					<span id="akiCurrentLevel">
+						Level <span id="akiLevel">
+								<script type="text/javascript">
+									document.write(akiLevel)
+								</script>
+							   </span>
+					</span>
+					<span id="akiModifier">+ 
+						<script type="text/javascript">
+									document.write(akiModifier)
+								</script>
+					</span>
+				</div>
+				<div id="playerAki">
+					<span id="akiDisplayHP">
+						<script type="text/javascript">
+						document.write(akiDisplayHP)
+						</script>
+					</span><br/>
+					<span id="akiCurrentLevel">
+						Level <span id="akiLevel">
+								<script type="text/javascript">
+									document.write(akiLevel)
+								</script>
+							   </span>
+					</span>
+					<span id="akiModifier">+ 
+						<script type="text/javascript">
+									document.write(akiModifier)
+								</script>
+					</span>
+				</div>
 			</div>
 		</div>
 		<div id="enemyStats">
@@ -91,7 +148,7 @@
 	<div id="controlPanel">
 		<div class="cpWrapper">
 			<div>
-				<h1>Player 1</h1>
+				<h1>Pallet Box</h1>
 			</div>
 				<h2>Stats</h2>
 					<div>
@@ -108,6 +165,13 @@
 						<input type="text" name="modifier" id="cpModifier" value="" />
 						<div class="set button" id="sModifier">set</div>
 					</div>
+					<div id="attackPlayer">
+						<div class="aeButton" id="ap1">1</div>
+						<div class="aeButton" id="ap3">3</div>
+						<div class="aeButton" id="ap5">5</div>
+						<div class="aeButton" id="ap10">10</div>
+					</div>
+					<br/>
 				<h2>Inventory</h2>
 					<div>
 						<label for="name">Moves</label><br/>
@@ -152,7 +216,32 @@
 						<div class="set button" id="sS">set</div>
 					</div>
 		</div>
-		<div class="cpWrapper">.</div>
+<!aki>
+		<div class="cpWrapper" id="aki"><div>
+				<h1>Evil Aki</h1>
+			</div>
+				<h2>Stats</h2>
+					<div>
+						<label>Current HP / Max HP</label><br/>
+						<input type="text" name="akiCurrentHP" id="cpAkiHP" value="" />
+						<div class="set button" id="sAkiHP">set</div>
+						<input type="text" name="akiMaxHP" id="cpAkiMaxHP" value="" />
+						<div class="set button" id="sAkiMaxHP">set</div>
+					</div>
+					<div>
+						<label>Level     / Modifier</label><br/>
+						<input type="text" name="akiLevel" id="cpAkiLevel" value="" />
+						<div class="set button" id="sAkiLevel">set</div>
+						<input type="text" name="akiModifier" id="cpAkiModifier" value="" />
+						<div class="set button" id="sAkiModifier">set</div>
+					</div>
+					<div id="attackAki">
+						<div class="aeButton" id="aap1">1</div>
+						<div class="aeButton" id="aap3">3</div>
+						<div class="aeButton" id="aap5">5</div>
+						<div class="aeButton" id="aap10">10</div>
+					</div>
+					<br/></div>
 		<div class="cpWrapper">.</div>
 		<div class="clear"></div>
 		<div class="cpEnemy">

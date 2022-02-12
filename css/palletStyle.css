@@ -3,6 +3,8 @@ body{
 	padding:0;
 	font-family: Arial, Helvetica, sans-serif;
 }
+h1,h2,h3{margin-bottom:0;}
+h1{margin-top:0;}
 input{
 	width:50px;
 	text-align:center;
@@ -18,7 +20,7 @@ input{
 #characterUIwrapper{
 	width: 313px;
     height: 720px;
-    background: url(../images/BattleBoxPanelMain.png);
+    background: url(../images/BattleBoxPanelMain2.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -124,6 +126,33 @@ input{
 	top: 25px;
 	left: 63px;
 }
+/* Aki*/
+#aki {
+    background:lightsteelblue;
+	border: 1px solid black;
+    padding: 3px;
+}
+#playerAki {
+    position: absolute;
+    left: 200px;
+    top: 467px;
+    color:#3c3c3c;
+    font-weight: bold;
+    width: 110px;
+}
+#akiDisplayHP {font-size: 25px;}
+#akiCurrentLevel {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+}
+#akiModifier {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+    left: 63px;
+}
+
 #moves{
 	top:605px;
 	right:265px;
@@ -206,6 +235,9 @@ input{
 	color:white;
 }
 #etehp{float:left;}
+#attackPlayer {
+    height: 30px;
+}
 #attackEnemy {
     float: left;
     margin-left: 30px;
