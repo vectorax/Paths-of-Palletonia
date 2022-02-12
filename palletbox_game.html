@@ -29,60 +29,63 @@
 								</script>
 					</span>
 				</div>
-				<div id="playerAki">
-					<span id="akiDisplayHP">
+				<div id="player2">
+					<div id="p2avatar" class="avatarPic"><img src="images/player2.png"/></div>
+					<span id="p2DisplayHP">
 						<script type="text/javascript">
-						document.write(akiDisplayHP)
+						document.write(p2DisplayHP)
 						</script>
 					</span><br/>
-					<span id="akiCurrentLevel">
-						Level <span id="akiLevel">
+					<span id="p2CurrentLevel">
+						Level <span id="p2Level">
 								<script type="text/javascript">
-									document.write(akiLevel)
+									document.write(p2Level)
 								</script>
 							   </span>
 					</span>
-					<span id="akiModifier">+ 
+					<span id="p2Modifier">+ 
 						<script type="text/javascript">
-									document.write(akiModifier)
+									document.write(p2Modifier)
 								</script>
 					</span>
 				</div>
-				<div id="playerAki">
-					<span id="akiDisplayHP">
+				<div id="player3">
+					<div id="p3avatar" class="avatarPic"><img src="images/player3.png"/></div>
+					<span id="p3DisplayHP">
 						<script type="text/javascript">
-						document.write(akiDisplayHP)
+						document.write(p3DisplayHP)
 						</script>
 					</span><br/>
-					<span id="akiCurrentLevel">
-						Level <span id="akiLevel">
+					<span id="p3CurrentLevel">
+						Level <span id="p3Level">
 								<script type="text/javascript">
-									document.write(akiLevel)
+									document.write(p3Level)
 								</script>
 							   </span>
 					</span>
-					<span id="akiModifier">+ 
+					<span id="p3Modifier">+ 
 						<script type="text/javascript">
-									document.write(akiModifier)
+									document.write(p3Modifier)
 								</script>
 					</span>
 				</div>
-				<div id="playerAki">
-					<span id="akiDisplayHP">
+				<div id="player4">
+					<div id="p4avatar" class="avatarPic"><img src="images/player4.png"/></div>
+					<span id="p4DisplayHP">
 						<script type="text/javascript">
-						document.write(akiDisplayHP)
+						document.write(p4DisplayHP)
 						</script>
 					</span><br/>
-					<span id="akiCurrentLevel">
-						Level <span id="akiLevel">
+					<span id="p4CurrentLevel">
+						Level <span id="p4Level">
 								<script type="text/javascript">
-									document.write(akiLevel)
+									document.write(p4Level)
 								</script>
 							   </span>
 					</span>
-					<span id="akiModifier">+ 
+					<span id="p4Modifier">+ 
 						<script type="text/javascript">
-									document.write(akiModifier)
+									document.write(p4Modifier)
 								</script>
 					</span>
 				</div>
@@ -216,32 +219,88 @@
 						<div class="set button" id="sS">set</div>
 					</div>
 		</div>
-<!aki>
-		<div class="cpWrapper" id="aki"><div>
-				<h1>Evil Aki</h1>
+<!p2>
+		<div class="cpWrapper" id="p2"><div>
+				<h1>player2</h1>
 			</div>
 				<h2>Stats</h2>
 					<div>
 						<label>Current HP / Max HP</label><br/>
-						<input type="text" name="akiCurrentHP" id="cpAkiHP" value="" />
-						<div class="set button" id="sAkiHP">set</div>
-						<input type="text" name="akiMaxHP" id="cpAkiMaxHP" value="" />
-						<div class="set button" id="sAkiMaxHP">set</div>
+						<input type="text" name="p2CurrentHP" id="cpp2HP" value="" />
+						<div class="set button" id="sp2HP">set</div>
+						<input type="text" name="p2MaxHP" id="cpp2MaxHP" value="" />
+						<div class="set button" id="sp2MaxHP">set</div>
 					</div>
 					<div>
 						<label>Level     / Modifier</label><br/>
-						<input type="text" name="akiLevel" id="cpAkiLevel" value="" />
-						<div class="set button" id="sAkiLevel">set</div>
-						<input type="text" name="akiModifier" id="cpAkiModifier" value="" />
-						<div class="set button" id="sAkiModifier">set</div>
+						<input type="text" name="p2Level" id="cpp2Level" value="" />
+						<div class="set button" id="sp2Level">set</div>
+						<input type="text" name="p2Modifier" id="cpp2Modifier" value="" />
+						<div class="set button" id="sp2Modifier">set</div>
 					</div>
-					<div id="attackAki">
+					<div id="attackp2">
 						<div class="aeButton" id="aap1">1</div>
 						<div class="aeButton" id="aap3">3</div>
 						<div class="aeButton" id="aap5">5</div>
 						<div class="aeButton" id="aap10">10</div>
 					</div>
-					<br/></div>
+					<br/>
+			</div>
+<!p3>
+		<div class="cpWrapper" id="p3"><div>
+				<h1>player3</h1>
+			</div>
+				<h2>Stats</h2>
+					<div>
+						<label>Current HP / Max HP</label><br/>
+						<input type="text" name="p3CurrentHP" id="cpp3HP" value="" />
+						<div class="set button" id="sp3HP">set</div>
+						<input type="text" name="p3MaxHP" id="cpp3MaxHP" value="" />
+						<div class="set button" id="sp3MaxHP">set</div>
+					</div>
+					<div>
+						<label>Level     / Modifier</label><br/>
+						<input type="text" name="p3Level" id="cpp3Level" value="" />
+						<div class="set button" id="sp3Level">set</div>
+						<input type="text" name="p3Modifier" id="cpp3Modifier" value="" />
+						<div class="set button" id="sp3Modifier">set</div>
+					</div>
+					<div id="attackp3">
+						<div class="aeButton" id="a3p1">1</div>
+						<div class="aeButton" id="a3p3">3</div>
+						<div class="aeButton" id="a3p5">5</div>
+						<div class="aeButton" id="a3p10">10</div>
+					</div>
+					<br/>
+			</div>
+<!p4>
+		<div class="cpWrapper" id="p4"><div>
+				<h1>player4</h1>
+			</div>
+				<h2>Stats</h2>
+					<div>
+						<label>Current HP / Max HP</label><br/>
+						<input type="text" name="p4CurrentHP" id="cpp4HP" value="" />
+						<div class="set button" id="sp4HP">set</div>
+						<input type="text" name="p4MaxHP" id="cpp4MaxHP" value="" />
+						<div class="set button" id="sp4MaxHP">set</div>
+					</div>
+					<div>
+						<label>Level     / Modifier</label><br/>
+						<input type="text" name="p4Level" id="cpp4Level" value="" />
+						<div class="set button" id="sp4Level">set</div>
+						<input type="text" name="p4Modifier" id="cpp4Modifier" value="" />
+						<div class="set button" id="sp4Modifier">set</div>
+					</div>
+					<div id="attackp4">
+						<div class="aeButton" id="a4p1">1</div>
+						<div class="aeButton" id="a4p3">3</div>
+						<div class="aeButton" id="a4p5">5</div>
+						<div class="aeButton" id="a4p10">10</div>
+					</div>
+					<br/>
+			</div>
+
 		<div class="cpWrapper">.</div>
 		<div class="clear"></div>
 		<div class="cpEnemy">

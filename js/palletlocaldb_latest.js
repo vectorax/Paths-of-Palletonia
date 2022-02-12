@@ -7,12 +7,26 @@ var displayHP = currentHP+"/"+maxHP;
 var currentLevel = localStorage.getItem('currentLevel',currentLevel);
 var modifier = localStorage.getItem('modifier',modifier);
 
-//Aki
-var akiHP = localStorage.getItem('akiHP',akiHP);
-var akiMaxHP = localStorage.getItem('akiMaxHP',akiMaxHP);
-var akiDisplayHP = akiHP+"/"+akiMaxHP;
-var akiLevel = localStorage.getItem('akiLevel',akiLevel);
-var akiModifier = localStorage.getItem('akiModifier',akiModifier);
+//Player2
+var p2HP = localStorage.getItem('p2HP',p2HP);
+var p2MaxHP = localStorage.getItem('p2MaxHP',p2MaxHP);
+var p2DisplayHP = p2HP+"/"+p2MaxHP;
+var p2Level = localStorage.getItem('p2Level',p2Level);
+var p2Modifier = localStorage.getItem('p2Modifier',p2Modifier);
+
+//Player3
+var p3HP = localStorage.getItem('p3HP',p3HP);
+var p3MaxHP = localStorage.getItem('p3MaxHP',p3MaxHP);
+var p3DisplayHP = p3HP+"/"+p3MaxHP;
+var p3Level = localStorage.getItem('p3Level',p3Level);
+var p3Modifier = localStorage.getItem('p3Modifier',p3Modifier);
+
+//Player4
+var p4HP = localStorage.getItem('p4HP',p4HP);
+var p4MaxHP = localStorage.getItem('p4MaxHP',p4MaxHP);
+var p4DisplayHP = p4HP+"/"+p4MaxHP;
+var p4Level = localStorage.getItem('p4Level',p4Level);
+var p4Modifier = localStorage.getItem('p4Modifier',p4Modifier);
 
 //Player Inventory
 var moves = localStorage.getItem('moves',moves);
@@ -51,11 +65,21 @@ $(document).ready(function(){
 	$('#cpMaxHP').val(maxHP);
 	$('#cpLevel').val(currentLevel);
 	$('#cpModifier').val(modifier);
-//aki
-	$('#cpAkiHP').val(akiHP);
-	$('#cpAkiMaxHP').val(akiMaxHP);
-	$('#cpAkiLevel').val(akiLevel);
-	$('#cpAkiModifier').val(akiModifier);
+//p2
+	$('#cpp2HP').val(p2HP);
+	$('#cpp2MaxHP').val(p2MaxHP);
+	$('#cpp2Level').val(p2Level);
+	$('#cpp2Modifier').val(p2Modifier);
+//p3
+	$('#cpp3HP').val(p3HP);
+	$('#cpp3MaxHP').val(p3MaxHP);
+	$('#cpp3Level').val(p3Level);
+	$('#cpp3Modifier').val(p3Modifier);
+//p4
+	$('#cpp4HP').val(p4HP);
+	$('#cpp4MaxHP').val(p4MaxHP);
+	$('#cpp4Level').val(p4Level);
+	$('#cpp4Modifier').val(p4Modifier);
 //inventory
 	$('#cpMoves').val(moves);
 	$('#cpBullets').val(bullets);
@@ -105,29 +129,77 @@ $(document).ready(function(){
 		document.getElementById('playerModifier').innerHTML = "+ "+modifier;
 		localStorage.setItem('modifier',modifier);
 		});
-//Aki HP functions
-	$('#sAkiHP').click( function() {
-		var akiHP = $('#cpAkiHP').val();
-		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
-		localStorage.setItem('akiHP',akiHP);
+//p2 HP functions
+	$('#sp2HP').click( function() {
+		var p2HP = $('#cpp2HP').val();
+		document.getElementById('p2DisplayHP').innerHTML = p2DisplayHP;
+		localStorage.setItem('p2HP',p2HP);
 		location.reload();
 		});
-	$('#sAkiMaxHP').click( function() {
-		var akiMaxHP = $('#cpAkiMaxHP').val();
-		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
-		localStorage.setItem('akiMaxHP',akiMaxHP);
+	$('#sp2MaxHP').click( function() {
+		var p2MaxHP = $('#cpp2MaxHP').val();
+		document.getElementById('p2DisplayHP').innerHTML = p2DisplayHP;
+		localStorage.setItem('p2MaxHP',p2MaxHP);
 		location.reload();
 		});
-// Aki level and modifier
-	$('#sAkiLevel').click( function() {
-		var akiLevel = $('#cpAkiLevel').val();
-		document.getElementById('akiLevel').innerHTML = akiLevel;
-		localStorage.setItem('akiLevel',akiLevel);
+// p2 level and modifier
+	$('#sp2Level').click( function() {
+		var p2Level = $('#cpp2Level').val();
+		document.getElementById('p2Level').innerHTML = p2Level;
+		localStorage.setItem('p2Level',p2Level);
 		});
-	$('#sAkiModifier').click( function() {
-		var akiModifier = $('#cpAkiModifier').val();
-		document.getElementById('akiModifier').innerHTML = "+ "+akiModifier;
-		localStorage.setItem('akiModifier',akiModifier);
+	$('#sp2Modifier').click( function() {
+		var p2Modifier = $('#cpp2Modifier').val();
+		document.getElementById('p2Modifier').innerHTML = "+ "+p2Modifier;
+		localStorage.setItem('p2Modifier',p2Modifier);
+		});
+//p3 HP functions
+	$('#sp3HP').click( function() {
+		var p3HP = $('#cpp3HP').val();
+		document.getElementById('p3DisplayHP').innerHTML = p3DisplayHP;
+		localStorage.setItem('p3HP',p3HP);
+		location.reload();
+		});
+	$('#sp3MaxHP').click( function() {
+		var p3MaxHP = $('#cpp3MaxHP').val();
+		document.getElementById('p3DisplayHP').innerHTML = p3DisplayHP;
+		localStorage.setItem('p3MaxHP',p3MaxHP);
+		location.reload();
+		});
+// p3 level and modifier
+	$('#sp3Level').click( function() {
+		var p3Level = $('#cpp3Level').val();
+		document.getElementById('p3Level').innerHTML = p3Level;
+		localStorage.setItem('p3Level',p3Level);
+		});
+	$('#sp3Modifier').click( function() {
+		var p3Modifier = $('#cpp3Modifier').val();
+		document.getElementById('p3Modifier').innerHTML = "+ "+p3Modifier;
+		localStorage.setItem('p3Modifier',p3Modifier);
+		});
+//p4 HP functions
+	$('#sp4HP').click( function() {
+		var p4HP = $('#cpp4HP').val();
+		document.getElementById('p4DisplayHP').innerHTML = p4DisplayHP;
+		localStorage.setItem('p4HP',p4HP);
+		location.reload();
+		});
+	$('#sp4MaxHP').click( function() {
+		var p4MaxHP = $('#cpp4MaxHP').val();
+		document.getElementById('p4DisplayHP').innerHTML = p4DisplayHP;
+		localStorage.setItem('p4MaxHP',p4MaxHP);
+		location.reload();
+		});
+// p4 level and modifier
+	$('#sp4Level').click( function() {
+		var p4Level = $('#cpp4Level').val();
+		document.getElementById('p4Level').innerHTML = p4Level;
+		localStorage.setItem('p4Level',p4Level);
+		});
+	$('#sp4Modifier').click( function() {
+		var p4Modifier = $('#cpp4Modifier').val();
+		document.getElementById('p4Modifier').innerHTML = "+ "+p4Modifier;
+		localStorage.setItem('p4Modifier',p4Modifier);
 		});
 //moves
 	$('#iM').click( function() {
@@ -344,37 +416,103 @@ $(document).ready(function(){
 		document.getElementById('playerHP').innerHTML = displayHP;
 		location.reload();
 	});
-//Battle Aki
+//Battle p2
 	$('#aap1').click(function() {
 		var hit = 1;
-		akiHP = akiHP - hit;
-		$('#cpAkiHP').val(akiHP);
-		localStorage.setItem('akiHP',akiHP);
-		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		p2HP = p2HP - hit;
+		$('#cpp2HP').val(p2HP);
+		localStorage.setItem('p2HP',p2HP);
+		document.getElementById('p2DisplayHP').innerHTML = p2DisplayHP;
 		location.reload();
 	});
 	$('#aap3').click(function() {
 		var hit = 3;
-		akiHP = akiHP - hit;
-		$('#cpAkiHP').val(akiHP);
-		localStorage.setItem('akiHP',akiHP);
-		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		p2HP = p2HP - hit;
+		$('#cpp2HP').val(p2HP);
+		localStorage.setItem('p2HP',p2HP);
+		document.getElementById('p2DisplayHP').innerHTML = p2DisplayHP;
 		location.reload();
 	});
 	$('#aap5').click(function() {
 		var hit = 5;
-		akiHP = akiHP - hit;
-		$('#cpAkiHP').val(akiHP);
-		localStorage.setItem('akiHP',akiHP);
-		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		p2HP = p2HP - hit;
+		$('#cpp2HP').val(p2HP);
+		localStorage.setItem('p2HP',p2HP);
+		document.getElementById('p2DisplayHP').innerHTML = p2DisplayHP;
 		location.reload();
 	});
 	$('#aap10').click(function() {
 		var hit = 10;
-		akiHP = akiHP - hit;
-		$('#cpAkiHP').val(akiHP);
-		localStorage.setItem('akiHP',akiHP);
-		document.getElementById('akiDisplayHP').innerHTML = akiDisplayHP;
+		p2HP = p2HP - hit;
+		$('#cpp2HP').val(p2HP);
+		localStorage.setItem('p2HP',p2HP);
+		document.getElementById('p2DisplayHP').innerHTML = p2DisplayHP;
+		location.reload();
+	});
+//Battle p3
+	$('#a3p1').click(function() {
+		var hit = 1;
+		p3HP = p3HP - hit;
+		$('#cpp3HP').val(p3HP);
+		localStorage.setItem('p3HP',p3HP);
+		document.getElementById('p3DisplayHP').innerHTML = p3DisplayHP;
+		location.reload();
+	});
+	$('#a3p3').click(function() {
+		var hit = 3;
+		p3HP = p3HP - hit;
+		$('#cpp3HP').val(p3HP);
+		localStorage.setItem('p3HP',p3HP);
+		document.getElementById('p3DisplayHP').innerHTML = p3DisplayHP;
+		location.reload();
+	});
+	$('#a3p5').click(function() {
+		var hit = 5;
+		p3HP = p3HP - hit;
+		$('#cpp3HP').val(p3HP);
+		localStorage.setItem('p3HP',p3HP);
+		document.getElementById('p3DisplayHP').innerHTML = p3DisplayHP;
+		location.reload();
+	});
+	$('#a3p10').click(function() {
+		var hit = 10;
+		p3HP = p3HP - hit;
+		$('#cpp3HP').val(p3HP);
+		localStorage.setItem('p3HP',p3HP);
+		document.getElementById('p3DisplayHP').innerHTML = p3DisplayHP;
+		location.reload();
+	});
+//Battle p4
+	$('#a4p1').click(function() {
+		var hit = 1;
+		p4HP = p4HP - hit;
+		$('#cpp4HP').val(p4HP);
+		localStorage.setItem('p4HP',p4HP);
+		document.getElementById('p4DisplayHP').innerHTML = p4DisplayHP;
+		location.reload();
+	});
+	$('#a4p3').click(function() {
+		var hit = 3;
+		p4HP = p4HP - hit;
+		$('#cpp4HP').val(p4HP);
+		localStorage.setItem('p4HP',p4HP);
+		document.getElementById('p4DisplayHP').innerHTML = p4DisplayHP;
+		location.reload();
+	});
+	$('#a4p5').click(function() {
+		var hit = 5;
+		p4HP = p4HP - hit;
+		$('#cpp4HP').val(p4HP);
+		localStorage.setItem('p4HP',p4HP);
+		document.getElementById('p4DisplayHP').innerHTML = p4DisplayHP;
+		location.reload();
+	});
+	$('#a4p10').click(function() {
+		var hit = 10;
+		p4HP = p4HP - hit;
+		$('#cpp4HP').val(p4HP);
+		localStorage.setItem('p4HP',p4HP);
+		document.getElementById('p4DisplayHP').innerHTML = p4DisplayHP;
 		location.reload();
 	});
 //battle enemy

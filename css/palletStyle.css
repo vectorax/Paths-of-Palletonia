@@ -20,7 +20,7 @@ input{
 #characterUIwrapper{
 	width: 313px;
     height: 720px;
-    background: url(../images/BattleBoxPanelMain2.png);
+    background: url(../images/BattleBoxPanelMain.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -28,6 +28,15 @@ input{
     background-repeat: no-repeat;
     background-size: contain;
 }
+.avatarPic{
+	position: absolute;
+	top: 7px;
+	left: -41px;
+}
+.avatarPic img{height:32px;}
+#p2avatar{}
+#p3avatar{}
+#p4avatar{}
 
 #controlPanel {
     height:680px;
@@ -126,13 +135,13 @@ input{
 	top: 25px;
 	left: 63px;
 }
-/* Aki*/
-#aki {
+/* Player2*/
+#p2 {
     background:lightsteelblue;
 	border: 1px solid black;
     padding: 3px;
 }
-#playerAki {
+#player2 {
     position: absolute;
     left: 200px;
     top: 467px;
@@ -140,13 +149,67 @@ input{
     font-weight: bold;
     width: 110px;
 }
-#akiDisplayHP {font-size: 25px;}
-#akiCurrentLevel {
+#p2DisplayHP {font-size: 25px;}
+#p2CurrentLevel {
     font-size: 13px;
     position: absolute;
     top: 25px;
 }
-#akiModifier {
+#p2Modifier {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+    left: 63px;
+}
+/* Player3*/
+#p3 {
+    background:lightsteelblue;
+	border: 1px solid black;
+    padding: 3px;
+}
+#player3 {
+    position: absolute;
+	left: 48px;
+	top: 505px;
+	color: #3c3c3c;
+	font-weight: bold;
+	width: 110px;
+}
+#p3DisplayHP {font-size: 25px;}
+#p3CurrentLevel {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+}
+#p3Modifier {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+    left: 63px;
+}
+/* Player4*/
+#p4 {
+    background:lightsteelblue;
+	border: 1px solid black;
+    padding: 3px;
+	position: absolute;
+	right: 0;
+}
+#player4 {
+    position: absolute;
+    left: 200px;
+    top: 507px;
+    color:#3c3c3c;
+    font-weight: bold;
+    width: 110px;
+}
+#p4DisplayHP {font-size: 25px;}
+#p4CurrentLevel {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+}
+#p4Modifier {
     font-size: 13px;
     position: absolute;
     top: 25px;
